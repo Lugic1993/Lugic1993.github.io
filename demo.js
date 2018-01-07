@@ -163,6 +163,137 @@ window.addEventListener('load', function(){
 	});
 });
 
+/*
+
+ //1加到100
+	 var p = 0;
+	 for (var i = 1; i <= 100; i++){
+	 	p += i;
+	 };
+	 document.write(p);
+
+
+*/
+
+//计算不同自赠数的和
+
+function countAmount(start, end) {
+	var amount = 0;
+	for (var i = start; i <= end; i++){
+		amount += i;
+	};
+	return amount;
+};
+
+//将结果输出到页面中
+
+window.addEventListener('load', function(){
+	var startcal = document.getElementById('startcal');
+	startcal.addEventListener('click', function(){
+		var start = document.getElementById("start").value;
+		start = Number(start);
+		//console.log(start);
+		var end = document.getElementById("end").value;
+		end = Number(end);
+		//console.log(end);
+		var total = document.getElementById('total');
+		var totalamount = 0;
+		if (end >= start){
+			if(end - start >= 10000){
+				total.innerHTML = '数值过大，电脑将会卡死！';
+				return;
+			} else {
+				totalamount = countAmount(start,end);
+				total.innerHTML = totalamount;
+			}
+		} else {
+			total.innerHTML = '数值不合法，请重新输入';
+			return;
+		};
+		
+	});
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
